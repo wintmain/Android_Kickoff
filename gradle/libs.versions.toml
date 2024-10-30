@@ -24,12 +24,17 @@ kotlin = "1.9.22"
 hilt = "2.48.1"
 casa = "0.5.1"
 agp = "8.5.2"
+kotlinxCoroutines = "1.9.0"
 ksp = "1.9.22-1.0.17" # Should be updated when kotlin version is updated
 coreExt = "1.13.1"
 androidx_activity = "1.9.2"
 androidx_appcompat = "1.7.0"
 androidx_navigation = "2.8.1"
 androidx_window = "1.3.0"
+lifecycleExtensions = "2.2.0"
+multidex = "1.0.3"
+roomRuntime = "2.6.1"
+smartrefresh = "1.1.2"
 
 [libraries]
 # Core dependencies
@@ -106,12 +111,22 @@ androidx-window = { module = "androidx.window:window", version.ref = "androidx_w
 androidx-window-java = { module = "androidx.window:window-java", version.ref = "androidx_window" }
 androidx-window-rxjava2 = { module = "androidx.window:window-rxjava2", version.ref = "androidx_window" }
 androidx-window-core = { module = "androidx.window:window-core", version.ref = "androidx_window" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 
 codelocator-core = "com.bytedance.tools.codelocator:codelocator-core:2.0.3"
 google-ksp-plugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 google-ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleExtensions" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleExtensions" }
 material = "com.google.android.material:material:1.12.0"
 accompanist-permissions = "com.google.accompanist:accompanist-permissions:0.32.0"
+multidex = { module = "com.android.support:multidex", version.ref = "multidex" }
+smartrefreshheader = { module = "com.scwang.smartrefresh:SmartRefreshHeader", version.ref = "smartrefresh" }
+smartrefreshlayout = { module = "com.scwang.smartrefresh:SmartRefreshLayout", version.ref = "smartrefresh" }
 
 # 测试依赖
     # To use the androidx.test.runner APIs
