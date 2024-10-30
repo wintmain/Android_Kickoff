@@ -17,8 +17,8 @@ For personal study use only.
 
 * [AndroidRes](app-catalog/samples/androidres)
 * [Foundation](app-catalog/samples/foundation)
-* [MyMusicPlayer](app-catalog/samples/mymusicplayer)
 * [ShadowLayout](app-catalog/samples/shadowlayout)
 * [Titlebar](app-catalog/samples/titlebar)
 * [Toaster](app-catalog/samples/toaster)
 * [Xperimissions](app-catalog/samples/xpermissions)
+* [Xplayer](app-catalog/samples/xplayer)
