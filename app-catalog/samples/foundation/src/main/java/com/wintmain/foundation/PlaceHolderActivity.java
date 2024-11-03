@@ -17,22 +17,24 @@
 package com.wintmain.foundation;
 
 import android.app.Application;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
+import com.google.android.catalog.framework.annotations.Sample;
 import lib.wintmain.titlebar.OnTitleBarListener;
 import lib.wintmain.titlebar.TitleBarExt;
 import lib.wintmain.titlebar.style.LightBarStyle;
 import lib.wintmain.toaster.toast.ToastUtils;
 
-//@Sample(
-//        name = "Android PfT",
-//        description = "Android Platform for Technology.",
-//        documentation = "",
-//        //    owners = ["wintmain"],
-//        tags = "A-Self_demos")
+@Sample(
+        name = "0-Android-Demo",
+        description = "一个为了测试API调用的入口",
+        tags = "A-Self_demos")
 public class PlaceHolderActivity extends AppCompatActivity {
 
     @Override
@@ -54,7 +56,15 @@ public class PlaceHolderActivity extends AppCompatActivity {
 
                     @Override
                     public void onTitleClick(TitleBarExt titleBar) {
-                        ToastUtils.show("你点击了中间");
+                        Intent newIntent = new Intent();
+                        newIntent.putExtra(AlarmClock.EXTRA_HOUR, 9);
+                        newIntent.putExtra(AlarmClock.EXTRA_MINUTES, 30);
+                        newIntent.setAction(AlarmClock.ACTION_SET_ALARM);
+                        newIntent.putExtra(AlarmClock.EXTRA_SKIP_UI, true);
+                        newIntent.setComponent(new ComponentName("com.android.deskclock", "com.android.deskclock.HandleApiCalls"));
+                        startActivity(newIntent);
+
+                        ToastUtils.show("你点击了中间，并且新建了一个9：30的闹钟");
                     }
 
                     @Override
